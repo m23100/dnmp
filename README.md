@@ -22,3 +22,20 @@ docker load -i mysql.tar
 ### 生成容器
 
 ```docker-compose up -d```
+
+### 上传下载大文件
+
+```
+git lfs install
+git lfs track "*.tar"
+git add .gitattributes
+git add test.tar
+git commit -m "add test.tar"
+git push
+
+centos 安装lfs
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.rpm.sh | sudo bash
+sudo yum install git-lfs
+git lfs install
+git lfs pull
+```
